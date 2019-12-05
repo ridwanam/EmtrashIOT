@@ -68,9 +68,13 @@ void loop() {
   Serial.print("Hasil Sensor 2 :");
   Serial.print(US2);
   Serial.println("cm");
-
-  if (US2 <= 5) {
+//trigger tutup tempat sampah
+  if (US2 <= 10 && binPercent <=93 ) {
     servoAne.write(180);
+    delay(1000);
+  }
+  if else(US2 <= 10 && binPercent >=93){
+    servoAne.write(0);
     delay(1000);
   }
   else {
@@ -111,6 +115,8 @@ void loop() {
   Serial.println(state);
   if ( state == HIGH ) {
     trashTime = 0;
+    servoAne.write(180);
+    delay(10000);
   } else {
     trashTime++;
   }
@@ -118,7 +124,7 @@ void loop() {
   Serial.println(lastTime);
 
   //Notifikasi Setup & display widget setup
-  binSize = 22;
+  binSize = 18;
   binPercent = double(reUS1) / binSize;
   Serial.print("binPercent int: ");
   Serial.println(binPercent);
