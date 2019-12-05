@@ -187,25 +187,25 @@ void loop() {
   }
 
   /*R9*/else if (lastTime > 18 && binPercent >= 0 && binPercent <= 25) {
-    binStatus = 3;
+    binStatus = 4;
     Firebase.set("bins/0/bin_status", binStatus);
     Firebase.set("bins/0/tindakan", "Sangat segera dibersihkan");
     Serial.print("binStatus: ");
     Serial.println(binStatus);
   }/*R10*/else if (lastTime > 18 && binPercent >= 26 && binPercent <= 60) {
-    binStatus = 3;
+    binStatus = 4;
     Firebase.set("bins/0/bin_status", binStatus);
     Firebase.set("bins/0/tindakan", "Sangat segera dibersihkan");
     Serial.print("binStatus: ");
     Serial.println(binStatus);
   }/*R11*/else if (lastTime > 18 && binPercent >= 61 && binPercent <= 80) {
-    binStatus = 3;
+    binStatus = 4;
     Firebase.set("bins/0/bin_status", binStatus);
     Firebase.set("bins/0/tindakan", "Sangat segera dibersihkan");
     Serial.print("binStatus: ");
     Serial.println(binStatus);
   }/*R12*/else if (lastTime > 18 && binPercent >= 81 && binPercent <= 100) {
-    binStatus = 3;
+    binStatus = 4;
     Firebase.set("bins/0/bin_status", binStatus);
     Firebase.set("bins/0/tindakan", "Sangat segera dibersihkan");
     Serial.print("binStatus: ");
